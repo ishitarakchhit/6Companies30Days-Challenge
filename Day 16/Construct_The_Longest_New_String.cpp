@@ -32,3 +32,25 @@ public:
         return helper(x, y, z, last, dp);
     }
 };
+
+
+
+
+
+//approach 2
+class Solution {
+public:
+
+    
+
+    int longestString(int x, int y, int z) {
+        //for string with ABABABAB
+        int ans = z*2;
+
+        //for string with AABBAABB 
+        ans += min(x, y)*4;
+
+        if(x>y || y>x) ans+=2;
+        return ans;
+    }
+};
