@@ -1,4 +1,23 @@
 /*
+//Approach 1: DP (n*k)
+dp[i] will denote the constrained sum upto index i if index i is included
+
+
+approach2: dp using priority queue (n*logk)
+heap will only contain k elements one at a time 
+heap => element, index to check if the heap's top can be considered in the sum for the current index or not
+
+
+approach3: dp using map (n*log) 
+similar to heap solution, but we will keep track of the elements using map and map will only contain k elements
+
+approach4: dp using deque (n)
+deque will only contain k elements,
+for every index i 
+- pop front if front's index is lower than the range of i-k to i-1.
+- pop back from deque whenever you find an element lower than it's front
+
+
 Approach
 iterate over nums[i], Keep pushing the current maximum element into the heap with its index.
 Now for every index, get into the heap to find the maximum element in i-k to i-1 range. If heap's top contains element with index lower than this range pop it otherwise calculate the maximum sum for current index and update answer variable according to maximum value.
