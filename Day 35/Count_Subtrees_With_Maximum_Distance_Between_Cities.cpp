@@ -6,7 +6,7 @@ and find the max distance for that subtree and store the result in maxi variable
 BFS function finds the minimum distance to reach from one node to other and if temp is marked -1, it means that we cannot push that node to our queue. In the end if temp contains any value equal to 10^6, it suggests that we were not able to visit that node and that particular subtree was invalid.
 Complexity
 Time complexity: 2^n
-Space complexity: O(n^2)
+Space complexity: O(2^n)
 Code
   */
 class Solution {
